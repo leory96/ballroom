@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit9fa1c36a2788d3995854955f75777434
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/leory96/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'l' => 
+        array (
+            'leory96\\' => 8,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'leory96\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/leory96/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -41,7 +51,8 @@ class ComposerStaticInit9fa1c36a2788d3995854955f75777434
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInit9fa1c36a2788d3995854955f75777434::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit9fa1c36a2788d3995854955f75777434::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit9fa1c36a2788d3995854955f75777434::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit9fa1c36a2788d3995854955f75777434::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit9fa1c36a2788d3995854955f75777434::$classMap;
 

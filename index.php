@@ -8,7 +8,11 @@ $app->config('debug', true);
 
 $app->get('/', function() {
     
-	echo "OK";
+	$sql = new leory96\DB\sql();
+	
+	$result = $sql ->select("SELECT * FROM met_plata");
+	
+	echo json_encode($result);
 
 });
 
